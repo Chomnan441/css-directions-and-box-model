@@ -1,74 +1,68 @@
-/* ล้างค่าเริ่มต้น */
+/* ล้างค่าเริ่มต้นของเบราว์เซอร์ให้เป็นศูนย์ เพื่อคุมพื้นที่ได้แม่นยำ */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+/* ฉากหลังสีขาวล้วนตามภาพตัวอย่าง */
 body {
-    background-color: #0d1527; /* สีพื้นหลังโทนน้ำเงินเข้มด้านนอกสุด */
-    font-family: 'Sarabun', sans-serif;
-    display: flex;
-    justify-content: center;
-    padding: 60px 20px;
-}
-
-/* กล่องใหญ่สีขาวห่อหุ้มตามดีไซน์ */
-.blog-container {
     background-color: #ffffff;
-    width: 100%;
-    max-width: 760px;
-    border-radius: 8px; /* ทำมุมมนรอบกล่องใหญ่ */
-    overflow: hidden;   /* ป้องกันไม่ให้แถบสีฟ้าด้านบนล้นขอบมุมมน */
+    font-family: 'Sarabun', sans-serif;
 }
 
-/* แถบหัวข้อด้านบนสุด */
+/* แถบหัวข้อด้านบน: ลงสีฟ้าเทา ขยายกว้างเต็มจอ และดันช่องไฟด้านใน */
 .header {
-    background-color: #94afc0; /* สีฟ้าเทาตามแบบ Figma */
-    padding: 18px 24px;
+    background-color: #94afc0; 
+    padding: 14px 24px;
+    border-bottom: 1px solid #cbd5e1; /* เส้นใต้แถบหัวข้อบาง ๆ */
 }
 
+/* ตัวอักษร Travel Blog */
 .header h1 {
-    font-size: 18px;
-    color: #1e293b;
-    font-weight: bold;
+    font-size: 22px;
+    color: #334155;
+    font-weight: 500;
 }
 
-/* พื้นที่โซนเนื้อหาการ์ดบทความด้านล่าง */
+/* ส่วนแสดงผลหลัก: ดันระยะห่างจากขอบด้านซ้ายและด้านบนตามรูปตัวอย่าง */
 .main {
-    padding: 30px 24px;
+    padding: 24px;
     display: flex;
     flex-direction: column;
-    gap: 25px; /* สร้างระยะห่างระว่าง Card */
+    gap: 24px; /* เว้นระยะห่างในแนวตั้งระหว่างการ์ดใบที่ 1 และ 2 */
 }
 
-/* ตัวกล่องการ์ดแต่ละใบ (Blog Card) */
+/* ตัวกล่องการ์ดแต่ละใบ: จัดการเส้นขอบหนา และลงพื้นหลังสีฟ้าสว่าง */
 .blog-card {
-    border: 2px solid #587081; /* เส้นขอบหนาสีเทาเข้มรอบการ์ด */
-    background-color: #f8fafc;
-    padding: 24px;
+    border: 1px solid #475569;   /* กรอบเส้นสีเทาเข้มรอบตัวการ์ด */
+    background-color: #e9eff4;   /* สีพื้นหลังการ์ดโทนสว่างอมฟ้าเทาตามตัวอย่าง */
+    padding: 20px;
+    width: 100%;
+    max-width: 540px;            /* ล็อกขนาดความกว้างของการ์ดให้กะทัดรัดพอดีสายตา */
 }
 
+/* หัวข้อข้างในการ์ด */
 .blog-card h2 {
-    font-size: 16px;
+    font-size: 18px;
     color: #1e293b;
-    margin-bottom: 12px;
+    margin-bottom: 12px;         /* ระยะห่างด้านล่างหัวข้อก่อนถึงรูปภาพ */
 }
 
-/* การจัดการรูปภาพในกล่องบทความ */
+/* การจัดการสัดส่วนรูปภาพวิว */
 .blog-image {
     width: 100%;
-    height: 180px;            /* ล็อกความสูงรูปภาพให้เท่ากัน */
-    object-fit: cover;        /* ป้องกันรูปภาพบิดเบี้ยว */
-    border: 1px solid #cbd5e1;
-    margin-bottom: 12px;
+    height: 180px;               /* ความสูงรูปภาพตามสเปก */
+    object-fit: cover;           /* สั่งรูปขยายเต็มพื้นที่โดยภาพไม่ยืดหรือเบี้ยว */
+    border: 1px solid #94a3b8;
+    margin-bottom: 14px;         /* ระยะห่างด้านล่างรูปภาพก่อนถึงเนื้อความ */
     display: block;
 }
 
-/* ย่อหน้าข้อความรายละเอียด */
+/* ย่อหน้าข้อความคำบรรยาย */
 .blog-description {
     font-size: 14px;
-    color: #475569;
-    line-height: 1.6;
-    text-align: justify;
+    color: #334155;
+    line-height: 1.5;            /* เว้นระยะระหว่างบรรทัดให้อ่านง่ายขึ้น */
+    text-align: justify;         /* จัดตัวอักษรชิดขอบหน้า-หลังเท่ากัน */
 }
