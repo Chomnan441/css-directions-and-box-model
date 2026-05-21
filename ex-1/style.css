@@ -1,77 +1,16 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+/* กล่องหุ้มรูปภาพเพื่อล็อกความสูงและสัดส่วน */
+.image-container {
+    width: 100%;
+    height: 180px;            /* กำหนดความสูงของพื้นที่ใส่รูปภาพ */
+    border: 1px solid #718096;
+    margin-bottom: 15px;
+    overflow: hidden;         /* ถ้าภาพใหญ่เกินขนาดกล่อง ให้ตัดส่วนที่ล้นทิ้ง */
 }
 
-body {
-  font-family: 'Sarabun', sans-serif;
-  background-color: #f0f4f8;
-  padding: 20px;
-}
-
-.blog-header {
-  background-color: #94afc0;
-  color: #2c3e50;
-  padding: 15px 20px;
-  font-size: 20px;
-  font-weight: bold;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-}
-
-.blog-container {
-  background-color: white;
-  padding: 30px;
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-}
-
-.blog-card {
-  border: 2px solid #587081;
-  background-color: #e2e8f0;
-  padding: 20px;
-  max-width: 500px;
-}
-
-.blog-title {
-  font-size: 18px;
-  color: #2c3e50;
-  margin-bottom: 15px;
-}
-
-.image-placeholder {
-  width: 100%;
-  height: 180px;
-  border: 1px solid #718096;
-  margin-bottom: 15px;
-  position: relative;
-  background-color: #cbd5e1;
-}
-
-.image-placeholder::before,
-.image-placeholder::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 1px;
-  background-color: #a0aec0;
-  top: 50%;
-}
-
-.image-placeholder::before {
-  transform: rotate(20deg);
-}
-
-.image-placeholder::after {
-  transform: rotate(-20deg);
-}
-
-.blog-description {
-  font-size: 14px;
-  color: #4a5568;
-  line-height: 1.6;
+/* ตั้งค่าตัวรูปภาพให้ยืด-หดจัดสัดส่วนอัตโนมัติ */
+.blog-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;        /* ทริกเด็ด: สั่งให้รูปขยายเต็มพื้นที่กล่องโดยที่สัดส่วนภาพไม่เบี้ยวหรือเพี้ยน */
+    display: block;
 }
