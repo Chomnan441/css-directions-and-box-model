@@ -1,1 +1,43 @@
 /* Start coding here */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.frame-lightgrey {
+  background-color: lightgrey;
+  padding: 16px;
+}
+
+.frame-black {
+  background-color: black;
+  padding: 16px;
+}
+
+.frame-crimson {
+  background-color: crimson;
+  padding: 24px;
+}
+
+.frame-khaki {
+  background-color: khaki;
+  width: 640px;
+  height: 400px;
+  text-align: center;
+}
+
+.frame-khaki h1 {
+  font-size: 72px;
+  padding-top: 30px;
+  color: black;
+}
+
