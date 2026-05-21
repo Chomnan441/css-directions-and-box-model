@@ -1,16 +1,86 @@
-/* กล่องหุ้มรูปภาพเพื่อล็อกความสูงและสัดส่วน */
-.image-container {
-    width: 100%;
-    height: 180px;            /* กำหนดความสูงของพื้นที่ใส่รูปภาพ */
-    border: 1px solid #718096;
-    margin-bottom: 15px;
-    overflow: hidden;         /* ถ้าภาพใหญ่เกินขนาดกล่อง ให้ตัดส่วนที่ล้นทิ้ง */
+/* 1. Reset ค่าพื้นฐานและตั้งฟอนต์ภาษาไทย */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-/* ตั้งค่าตัวรูปภาพให้ยืด-หดจัดสัดส่วนอัตโนมัติ */
-.blog-image {
+body {
+    background-color: #0d1527; /* พื้นหลังสีเข้มด้านนอกตามระบบการเรียน */
+    font-family: 'Sarabun', sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+/* 2. กล่องหน้าต่างใหญ่ (Container) */
+.blog-container {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 760px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* 3. แถบหัวข้อด้านบน (Header Bar) */
+.blog-header {
+    background-color: #90a4ae; /* สีฟ้าอมเทาตามดีไซน์ */
+    padding: 16px 24px;
+    color: #1e293b;
+}
+
+.blog-header h2 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* 4. พื้นที่เนื้อหาการ์ดด้านใน */
+.blog-content {
+    padding: 30px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* เว้นระยะห่างระหว่างการ์ด */
+}
+
+/* 5. สไตล์ของการ์ดบทความแต่ละชิ้น (Blog Card) */
+.blog-card {
+    border: 2px solid #4a5568; /* กรอบสีเข้มรอบตัวการ์ด */
+    padding: 20px;
+    background-color: #f8fafc;
+}
+
+.card-title {
+    font-size: 18px;
+    color: #2d3748;
+    margin-bottom: 12px;
+}
+
+/* 6. กล่องภาพจำลองที่มีเส้นกากบาท (Image Placeholder) */
+.image-placeholder {
+    width: 100%;
+    height: 180px;
+    background-color: #e2e8f0;
+    border: 1px solid #a0aec0;
+    margin-bottom: 12px;
+    position: relative;
+}
+
+/* สไตล์สำหรับวาดเส้นกากบาทให้พอดีกล่อง */
+.image-placeholder svg {
     width: 100%;
     height: 100%;
-    object-fit: cover;        /* ทริกเด็ด: สั่งให้รูปขยายเต็มพื้นที่กล่องโดยที่สัดส่วนภาพไม่เบี้ยวหรือเพี้ยน */
-    display: block;
+}
+
+.image-placeholder svg line {
+    stroke: #cbd5e1;
+    stroke-width: 1;
+}
+
+/* 7. ข้อความรายละเอียดด้านล่าง */
+.card-description {
+    font-size: 14px;
+    color: #4a5568;
+    line-height: 1.6;
+    text-align: justify;
 }
