@@ -1,86 +1,60 @@
-/* 1. Reset ค่าพื้นฐานและตั้งฟอนต์ภาษาไทย */
+/* Start coding here */
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
-
-body {
-    background-color: #0d1527; /* พื้นหลังสีเข้มด้านนอกตามระบบการเรียน */
-    font-family: 'Sarabun', sans-serif;
-    display: flex;
-    justify-content: center;
-    padding: 40px 20px;
-}
-
-/* 2. กล่องหน้าต่างใหญ่ (Container) */
-.blog-container {
+  }
+  
+  body {
+    font-family: "Sarabun", sans-serif;
     background-color: #ffffff;
-    width: 100%;
-    max-width: 760px;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-}
-
-/* 3. แถบหัวข้อด้านบน (Header Bar) */
-.blog-header {
-    background-color: #90a4ae; /* สีฟ้าอมเทาตามดีไซน์ */
-    padding: 16px 24px;
-    color: #1e293b;
-}
-
-.blog-header h2 {
-    font-size: 18px;
-    font-weight: bold;
-}
-
-/* 4. พื้นที่เนื้อหาการ์ดด้านใน */
-.blog-content {
-    padding: 30px 24px;
+  }
+  
+  .header {
+    background-color: #92aabd;
+    padding: 16px 32px;
+  }
+  
+  .header h1 {
+    color: #183b56;
+    font-size: 32px;
+    font-weight: 400;
+  }
+  
+  .main {
+    padding: 40px 32px;
     display: flex;
     flex-direction: column;
-    gap: 30px; /* เว้นระยะห่างระหว่างการ์ด */
-}
-
-/* 5. สไตล์ของการ์ดบทความแต่ละชิ้น (Blog Card) */
-.blog-card {
-    border: 2px solid #4a5568; /* กรอบสีเข้มรอบตัวการ์ด */
-    padding: 20px;
-    background-color: #f8fafc;
-}
-
-.card-title {
-    font-size: 18px;
-    color: #2d3748;
-    margin-bottom: 12px;
-}
-
-/* 6. กล่องภาพจำลองที่มีเส้นกากบาท (Image Placeholder) */
-.image-placeholder {
+    gap: 32px;
+    align-items: flex-start;
+  }
+  
+  .blog-card {
+    width: 700px;
+    background-color: #eeeeee;
+    border: 1px solid #183b56;
+    padding: 24px;
+  }
+  
+  .blog-card h2 {
+    color: #183b56;
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 16px;
+  }
+  
+  .blog-image {
+    display: block;
     width: 100%;
-    height: 180px;
-    background-color: #e2e8f0;
-    border: 1px solid #a0aec0;
-    margin-bottom: 12px;
-    position: relative;
-}
-
-/* สไตล์สำหรับวาดเส้นกากบาทให้พอดีกล่อง */
-.image-placeholder svg {
-    width: 100%;
-    height: 100%;
-}
-
-.image-placeholder svg line {
-    stroke: #cbd5e1;
-    stroke-width: 1;
-}
-
-/* 7. ข้อความรายละเอียดด้านล่าง */
-.card-description {
-    font-size: 14px;
-    color: #4a5568;
-    line-height: 1.6;
-    text-align: justify;
-}
+    height: 280px;
+    object-fit: cover;
+    border: 1px solid #183b56;
+    margin-bottom: 16px;
+  }
+  
+  .blog-description {
+    color: #183b56;
+    font-size: 16px;
+    line-height: 1.5;
+  }
