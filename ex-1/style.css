@@ -1,60 +1,74 @@
-/* Start coding here */
-
+/* ล้างค่าเริ่มต้น */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-  }
-  
-  body {
-    font-family: "Sarabun", sans-serif;
+}
+
+body {
+    background-color: #0d1527; /* สีพื้นหลังโทนน้ำเงินเข้มด้านนอกสุด */
+    font-family: 'Sarabun', sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 60px 20px;
+}
+
+/* กล่องใหญ่สีขาวห่อหุ้มตามดีไซน์ */
+.blog-container {
     background-color: #ffffff;
-  }
-  
-  .header {
-    background-color: #92aabd;
-    padding: 16px 32px;
-  }
-  
-  .header h1 {
-    color: #183b56;
-    font-size: 32px;
-    font-weight: 400;
-  }
-  
-  .main {
-    padding: 40px 32px;
+    width: 100%;
+    max-width: 760px;
+    border-radius: 8px; /* ทำมุมมนรอบกล่องใหญ่ */
+    overflow: hidden;   /* ป้องกันไม่ให้แถบสีฟ้าด้านบนล้นขอบมุมมน */
+}
+
+/* แถบหัวข้อด้านบนสุด */
+.header {
+    background-color: #94afc0; /* สีฟ้าเทาตามแบบ Figma */
+    padding: 18px 24px;
+}
+
+.header h1 {
+    font-size: 18px;
+    color: #1e293b;
+    font-weight: bold;
+}
+
+/* พื้นที่โซนเนื้อหาการ์ดบทความด้านล่าง */
+.main {
+    padding: 30px 24px;
     display: flex;
     flex-direction: column;
-    gap: 32px;
-    align-items: flex-start;
-  }
-  
-  .blog-card {
-    width: 700px;
-    background-color: #eeeeee;
-    border: 1px solid #183b56;
+    gap: 25px; /* สร้างระยะห่างระว่าง Card */
+}
+
+/* ตัวกล่องการ์ดแต่ละใบ (Blog Card) */
+.blog-card {
+    border: 2px solid #587081; /* เส้นขอบหนาสีเทาเข้มรอบการ์ด */
+    background-color: #f8fafc;
     padding: 24px;
-  }
-  
-  .blog-card h2 {
-    color: #183b56;
-    font-size: 24px;
-    font-weight: 400;
-    margin-bottom: 16px;
-  }
-  
-  .blog-image {
-    display: block;
-    width: 100%;
-    height: 280px;
-    object-fit: cover;
-    border: 1px solid #183b56;
-    margin-bottom: 16px;
-  }
-  
-  .blog-description {
-    color: #183b56;
+}
+
+.blog-card h2 {
     font-size: 16px;
-    line-height: 1.5;
-  }
+    color: #1e293b;
+    margin-bottom: 12px;
+}
+
+/* การจัดการรูปภาพในกล่องบทความ */
+.blog-image {
+    width: 100%;
+    height: 180px;            /* ล็อกความสูงรูปภาพให้เท่ากัน */
+    object-fit: cover;        /* ป้องกันรูปภาพบิดเบี้ยว */
+    border: 1px solid #cbd5e1;
+    margin-bottom: 12px;
+    display: block;
+}
+
+/* ย่อหน้าข้อความรายละเอียด */
+.blog-description {
+    font-size: 14px;
+    color: #475569;
+    line-height: 1.6;
+    text-align: justify;
+}
